@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '+3ut_8pol0(uztectvp!vvatg-v865e_w8i-z=vohn3ga6u%2#'
+SECRET_KEY = 'secret'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
 
     'api.apps.ApiConfig',
+    'frontend.apps.FrontendConfig',
 ]
 
 MIDDLEWARE = [
@@ -57,7 +58,10 @@ ROOT_URLCONF = 'todoapp.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [str(BASE_DIR.joinpath('./todoapp/templates'))],
+        'DIRS': [
+            str(BASE_DIR.joinpath('./todoapp/templates')),
+            str(BASE_DIR.joinpath('./frontend/templates')),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
