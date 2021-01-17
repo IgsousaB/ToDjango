@@ -1,5 +1,5 @@
-# todoapp
-A To-Do Application to learn and Get Started with Django.
+# ToDjango
+A simple To-Do Application to learn and Get Started with Django.
 It has a REST API with CRUD Functionality for the Back-End and HTML,CSS,Javascript for the Front-End.
 
 ## Built With:
